@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-number = input("Enter a number: ").strip()
+number = int(input("Enter a number: "))
 
 if number == "0":
     print("This number is equal to zero.")
