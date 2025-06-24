@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-Original_arrays = [13, 45, 23, 87, 2]
+Original_arrays = [-11, 45, 23, -87, 2, 30]
 New_arrays = []
 for number in Original_arrays:
     New_arrays.append(number + 2)
