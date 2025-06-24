@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-text = input("What you gotta say? : ")
+text = input("What you gotta say?: ")
 while True:
     if text == "STOP":
         break
