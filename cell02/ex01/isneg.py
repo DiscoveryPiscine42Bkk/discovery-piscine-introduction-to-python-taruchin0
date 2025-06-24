@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 number = int(input("Enter a number: "))
 
 if number < 0:
