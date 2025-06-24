@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 
-for i in range(0, 11):
+i = 0
+while i <= 10:
     print ("Table de ", i, " : ", end="")
-    for j in range (0,11):
+    j  = 0
+    while j <= 10:
         print( i * j , end=" ")
+        j += 1
     print()
+    i += 1
