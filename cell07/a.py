@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-
-def hello():
-    print("Hello, everyone!")
-
-if __name__ == "__main__":
-    hello()
+var = input('What you gotta say? : ')
+while var:
+    var = input('I got that! Anything else? : ')
+    if var == "STOP":
+        break
+    
