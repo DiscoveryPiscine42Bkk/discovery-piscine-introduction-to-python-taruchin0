@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-var = input('What you gotta say? : ')
-while var:
-    var = input('I got that! Anything else? : ')
-    if var == "STOP":
-        break
-    
+
+def scope_that( num ):
+    num+=1
+    return
+
+value=3
+print(f"Original value : {value}")
+scope_that(value)
+print(f"After function is called : {value}")
