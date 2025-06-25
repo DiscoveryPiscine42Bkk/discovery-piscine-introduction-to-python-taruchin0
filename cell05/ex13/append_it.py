@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 
 import sys
-parameters = sys.argv[1:]
+import re
+parameters = sys.argv
 
-if len(parameters) != 1:
+if len(parameters) < 2:
     print("none")
 else:
-    word = input(parameters)
-    if word == 'ism':
-        print("")
-    else:
-         print(word, +"ism")
+    for i in range(1 , len(parameters)):
+        if parameters[i].endswith("ism"):
+            continue
+        else:
+            parameters[i]+="ism"
+            print(parameters[i])
+            
