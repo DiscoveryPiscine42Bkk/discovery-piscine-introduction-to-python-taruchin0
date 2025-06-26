@@ -1,29 +1,34 @@
 def checkmate(board_str):
     board = [list(line) for line in board_str.strip().split('\n')]
     size = len(board)
-    
+    for i in board:
+        if len(i) != size:
+            print("Error")
+            return
+        
     # Find King's position
     king_pos = None
     for i in range(size):
         for j in range(size):
             if board[i][j] == 'K':
-                king_pos = (i, j)
-                break
-        if king_pos:
-            break
+                king_pos = (i, j) #tuple int
+                continue
+            if king_pos and  board[i][j] == 'K':
+                print("Error")
+                return
 
     if not king_pos:
-        print("Fail")
+        print("Error")
         return
 
-    kx, ky = king_pos
+    kx, ky = king_pos #int
 
     def is_valid(x, y):
-        return 0 <= x < size and 0 <= y < size
+        return 0 <= x < size and 0 <= y < size #check x y in board or not
 
     # Define check for each piece
     # 1. Pawn: can attack diagonally forward (from bottom to top)
-    for dx, dy in [(-1, -1), (-1, 1)]:
+    for dx, dy in [(1, 1), (-1, 1)]:
         x, y = kx + dx, ky + dy
         if is_valid(x, y) and board[x][y] == 'P':
             print("Success")
