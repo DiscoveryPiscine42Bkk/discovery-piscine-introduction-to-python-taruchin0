@@ -7,15 +7,16 @@ def checkmate(board_str):
             return
         
     # Find King's position
-    king_pos = None
+    king_count = 0
     for i in range(size):
         for j in range(size):
             if board[i][j] == 'K':
-                king_pos = (i, j) #tuple int
-                continue
-            if king_pos and  board[i][j] == 'K':
-                print("Error")
-                return
+                    king_pos = (i, j)
+                    king_count += 1
+
+    if king_count != 1:
+        print("Error")
+        return
 
     if not king_pos:
         print("Error")
@@ -28,7 +29,7 @@ def checkmate(board_str):
 
     # Define check for each piece
     # 1. Pawn: can attack diagonally forward (from bottom to top)
-    for dx, dy in [(1, 1), (-1, 1)]:
+    for dx, dy in [(1, 1), (1, -1)]:
         x, y = kx + dx, ky + dy
         if is_valid(x, y) and board[x][y] == 'P':
             print("Success")

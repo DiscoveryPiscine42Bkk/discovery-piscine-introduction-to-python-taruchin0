@@ -7,8 +7,8 @@ def main():
     
     if len(sys.argv) == 1:
         board = """\
-K...
-.K..
+....
+...K
 ..P.
 ....\
 """
