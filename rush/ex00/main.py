@@ -7,9 +7,9 @@ def main():
     #check input in terminal
     if len(sys.argv) == 1:
         board = """\
-.R..
+....
 ...K
-..P.
+....
 ....\
 """
         checkmate(board)
