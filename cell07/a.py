@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+def greetings(name="noble stranger"):
+ if type(name) == str:
+    print(f"Hello, {name}.")
+ else:
+    print("Error! It was not a name.")
 
-def scope_that( num ):
-    num+=1
-    return
-
-value=3
-print(f"Original value : {value}")
-scope_that(value)
-print(f"After function is called : {value}")
+greetings("Alexandra")
+greetings("Wil")
+greetings()
+greetings(42)
